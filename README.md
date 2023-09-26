@@ -1,27 +1,41 @@
-# CelsWeb
+# My Angular Input Components
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
+This repository contains two custom Angular input components: `app-input-text` and `app-input-password`, each with its set of input properties.
 
-## Development server
+## `app-input-text` Component
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Input Properties
 
-## Code scaffolding
+- `@Input() placeholder!: string;`: Specifies the placeholder text to display in the input field. It should be a string.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- `@Input() size: string = '';`: Sets the size of the input field. You can pass one of the following values: 'small', 'medium', or 'large'.
 
-## Build
+- `@Input() width: string = '';`: Defines the width of the input field. You can use any valid CSS unit such as `%`, `em`, `rem`, or `vm`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## `app-input-password` Component
 
-## Running unit tests
+### Input Properties
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `@Input() placeholder!: string;`: Specifies the placeholder text to display in the password input field. It should be a string.
 
-## Running end-to-end tests
+- `@Input() size: string = '';`: Sets the size of the password input field. You can pass one of the following values: 'small', 'medium', or 'large'.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Usage
 
-## Further help
+To use these components in your Angular application, simply include them in your templates and bind their input properties as needed.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Example usage of `app-input-text` and `app-input-password`:
+
+```html
+<app-input-text
+  [placeholder]="'Enter your name'"
+  [size]="'medium'"
+  [width]="'50%'"
+></app-input-text>
+
+```html
+<app-input-password
+  [placeholder]="'Enter your password'"
+  [size]="'large'"
+></app-input-password>
+
