@@ -7,11 +7,13 @@ import { FormsModule } from '@angular/forms';
 import { InputTextComponent } from './material/input-text/input-text.component';
 import { InputPasswordComponent } from './material/input-password/input-password.component';
 import { ButtonComponent } from './material/button/button.component';
+import { InputTextAreaComponent } from './material/input-text-area/input-text-area.component';
 
 
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 
 
@@ -20,7 +22,8 @@ import { ButtonModule } from 'primeng/button';
     AppComponent,
     InputTextComponent,
     InputPasswordComponent,
-    ButtonComponent
+    ButtonComponent,
+    InputTextAreaComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { ButtonModule } from 'primeng/button';
     FormsModule,
     InputTextModule,
     PasswordModule,
-    ButtonModule
+    ButtonModule,
+    InputTextareaModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
