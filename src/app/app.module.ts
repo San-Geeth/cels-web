@@ -14,6 +14,9 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { RadioButtonModule } from 'primeng/radiobutton';
+
+import { RadioButtonComponent } from './material/radio-button/radio-button.component';
 
 
 
@@ -23,7 +26,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     InputTextComponent,
     InputPasswordComponent,
     ButtonComponent,
-    InputTextAreaComponent
+    InputTextAreaComponent,
+    RadioButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     PasswordModule,
     ButtonModule,
     InputTextareaModule,
+    RadioButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
