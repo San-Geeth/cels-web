@@ -10,7 +10,7 @@ import { ButtonComponent } from './material/button/button.component';
 import { InputTextAreaComponent } from './material/input-text-area/input-text-area.component';
 import { RadioButtonComponent } from './material/radio-button/radio-button.component';
 import { CheckBoxComponent } from './material/check-box/check-box.component';
-
+import { DropdownComponent } from './material/dropdown/dropdown.component';
 
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
@@ -18,6 +18,7 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
+import { DropdownModule } from 'primeng/dropdown';
 
 
 
@@ -30,7 +31,8 @@ import { CheckboxModule } from 'primeng/checkbox';
     ButtonComponent,
     InputTextAreaComponent,
     RadioButtonComponent,
-    CheckBoxComponent
+    CheckBoxComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { CheckboxModule } from 'primeng/checkbox';
     ButtonModule,
     InputTextareaModule,
     RadioButtonModule,
-    CheckboxModule
+    CheckboxModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
