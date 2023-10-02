@@ -19,6 +19,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
 import { DropdownModule } from 'primeng/dropdown';
+import { LoginComponent } from './pages/login/login.component';
 
 
 
@@ -32,7 +33,8 @@ import { DropdownModule } from 'primeng/dropdown';
     InputTextAreaComponent,
     RadioButtonComponent,
     CheckBoxComponent,
-    DropdownComponent
+    DropdownComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
