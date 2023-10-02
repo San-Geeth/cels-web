@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+
+  showPassword = false;
+  @Input() userName!: string;
+  @Input() password!: string;
+
+
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
+
+  getUser(): void {
+    console.log(this.userName);
+    console.log(this.password);
+
+  }
 
 }

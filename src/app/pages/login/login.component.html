@@ -1,1 +1,21 @@
-<p>login works!</p>
+<div class="login-page">
+    <div class="login-container">
+        <h1>CELS</h1>
+        <form>
+            <div class="input-container">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required [(ngModel)]="userName">
+              </div>
+              <div class="input-container">
+                <label for="password">Password</label>
+                <div class="password-input">
+                  <input [type]="showPassword ? 'text' : 'password'" id="password" name="password" placeholder="Enter your password" required [(ngModel)]="password">
+                  <span class="toggle-password" (click)="togglePasswordVisibility()">
+                    <i [class]="showPassword ? 'pi pi-eye-slash' : 'pi pi-eye'" style="font-size: 1rem"></i>
+                  </span>
+                </div>
+              </div>
+            <button type="submit" (click)="getUser()">Login</button>
+        </form>
+    </div>
+</div>
