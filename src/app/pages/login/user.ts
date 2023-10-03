@@ -1,5 +1,4 @@
-export interface user {
+export interface UserLogin {
     username: string;
-    userType: string;
-    toke: string;
+    password: string;
 }
