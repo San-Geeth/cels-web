@@ -20,6 +20,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
 import { DropdownModule } from 'primeng/dropdown';
 import { LoginComponent } from './pages/login/login.component';
+import { StudentViewComponent } from './pages/student/student-view/student-view.component';
 
 
 
@@ -34,7 +35,8 @@ import { LoginComponent } from './pages/login/login.component';
     RadioButtonComponent,
     CheckBoxComponent,
     DropdownComponent,
-    LoginComponent
+    LoginComponent,
+    StudentViewComponent
   ],
   imports: [
     BrowserModule,
