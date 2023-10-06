@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./student-view.component.css']
 })
 export class StudentViewComponent {
-
+  editable : boolean = false;
 }

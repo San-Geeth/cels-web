@@ -1,21 +1,34 @@
 <div class="card flex">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="data-field">
-                <button class="btn btn-primary">167181</button>
-            </div>
-            <div class="data-field">
-                <label for="username">First Name</label>
-                <app-input-text [placeholder]="'First Name'" [width]="'100%'"></app-input-text>
-            </div>
-            <div class="data-field">
-                <label for="username">Last Name</label>
-                <app-input-text [placeholder]="'Last Name'" [width]="'100%'"></app-input-text>
-            </div>
-            <div class="data-field">
-                <label for="username">Address</label>
-                <app-input-text-area [placeHolder]="'Address'" [width]="'100%'"></app-input-text-area>
-            </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="data-field">
+        <button class="btn btn-primary">167181</button>
+      </div>
+      <div class="data-field">
+        <label for="username">First Name</label>
+        <app-input-text [placeholder]="'First Name'" [width]="'100%'"></app-input-text>
+      </div>
+      <div class="data-field">
+        <label for="username">Last Name</label>
+        <app-input-text [placeholder]="'Last Name'" [width]="'100%'"></app-input-text>
+      </div>
+      <div class="data-field">
+        <label for="username">Guardian's Name</label>
+        <app-input-text [placeholder]="'Last Name'" [width]="'100%'"></app-input-text>
+      </div>
+      <div class="data-field">
+        <label for="username">School/Workplace</label>
+        <app-input-text [placeholder]="'Last Name'" [width]="'100%'"></app-input-text>
+      </div>
+      <div class="data-field">
+        <label for="username">Address</label>
+        <app-input-text-area [placeHolder]="'Address'" [width]="'100%'"></app-input-text-area>
+      </div>
+      <div class="data-field">
+        <div *ngIf="editable">
+          <button class="btn btn-primary">Update</button>
         </div>
+      </div>
     </div>
+  </div>
 </div>
