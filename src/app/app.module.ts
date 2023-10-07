@@ -21,6 +21,7 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { DropdownModule } from 'primeng/dropdown';
 import { LoginComponent } from './pages/login/login.component';
 import { StudentViewComponent } from './pages/student/student-view/student-view.component';
+import {RouterOutlet} from "@angular/router";
 
 
 
@@ -48,7 +49,8 @@ import { StudentViewComponent } from './pages/student/student-view/student-view.
     InputTextareaModule,
     RadioButtonModule,
     CheckboxModule,
-    DropdownModule
+    DropdownModule,
+    RouterOutlet
   ],
   providers: [],
   bootstrap: [AppComponent]
