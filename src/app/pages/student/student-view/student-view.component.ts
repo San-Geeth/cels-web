@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Student} from "../Student";
 
 @Component({
   selector: 'app-student-view',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./student-view.component.css']
 })
 export class StudentViewComponent {
-  editable : boolean = false;
+  editable: boolean = false;
+  student: Student = {
+    firstName: 'Lakshitha',
+    lastName: 'Sangeeth',
+    address: '1976/2, galwala Road, Nagasena Mw',
+    birthday: '1998.10.05',
+    email: 'sangeeth@gmail.com',
+    index: 'STD1234',
+    guardianName: '',
+    school: '',
+    company: 'ikman.lk',
+    grade: 0
+  }
 }
