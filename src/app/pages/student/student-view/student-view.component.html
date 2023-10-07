@@ -1,33 +1,34 @@
-<div class="card flex">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="data-field">
-        <button class="btn btn-primary">167181</button>
+<div class="grid p-5">
+  <div class="col-6 md:col-6">
+    <div class="p-fluid">
+      <h5>{{ student.index }}</h5>
+      <div class="field">
+        <label htmlFor="firstName" class="label">First Name</label>
+        <input pInputText id="name1" type="text" [(ngModel)]="student.firstName"/>
       </div>
-      <div class="data-field">
-        <label for="username">First Name</label>
-        <app-input-text [placeholder]="'First Name'" [width]="'100%'"></app-input-text>
+      <div class="field">
+        <label htmlFor="firstName" class="label">Last Name</label>
+        <input pInputText id="lastName" type="text" [(ngModel)]="student.lastName"/>
       </div>
-      <div class="data-field">
-        <label for="username">Last Name</label>
-        <app-input-text [placeholder]="'Last Name'" [width]="'100%'"></app-input-text>
+      <div class="field">
+        <label htmlFor="email1" class="label">Email</label>
+        <input pInputText id="email1" type="text" [(ngModel)]="student.email"/>
       </div>
-      <div class="data-field">
-        <label for="username">Guardian's Name</label>
-        <app-input-text [placeholder]="'Last Name'" [width]="'100%'"></app-input-text>
+      <div *ngIf="student.grade != null && student.grade != 0" class="field">
+        <label htmlFor="grade" class="label">Grade</label>
+        <input pInputText id="grade" type="text" [(ngModel)]="student.grade" />
       </div>
-      <div class="data-field">
-        <label for="username">School/Workplace</label>
-        <app-input-text [placeholder]="'Last Name'" [width]="'100%'"></app-input-text>
+      <div *ngIf="student.guardianName != null && student.guardianName != ''" class="field">
+        <label htmlFor="guardian" class="label">Guardian's Name</label>
+        <input pInputText id="guardian" type="text" [(ngModel)]="student.guardianName" />
       </div>
-      <div class="data-field">
-        <label for="username">Address</label>
-        <app-input-text-area [placeHolder]="'Address'" [width]="'100%'"></app-input-text-area>
+      <div *ngIf="student.school != null && student.school != ''" class="field">
+        <label htmlFor="school" class="label">School</label>
+        <input pInputText id="school" type="text" [(ngModel)]="student.school" />
       </div>
-      <div class="data-field">
-        <div *ngIf="editable">
-          <button class="btn btn-primary">Update</button>
-        </div>
+      <div *ngIf="student.company != null && student.company != ''" class="field">
+        <label htmlFor="company" class="label">Company</label>
+        <input pInputText id="company" type="text" [(ngModel)]="student.company" />
       </div>
     </div>
   </div>
