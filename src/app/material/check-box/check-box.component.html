@@ -1,9 +1,0 @@
-
-<div class="card flex justify-content-center">
-    <div class="flex flex-column gap-2">
-        <div *ngFor="let chk of checkBoxes" class="field-checkbox">
-            <p-checkbox name="group" [value]="chk" [(ngModel)]="selectedBox" [inputId]="chk.chkKey"></p-checkbox>
-            <label [for]="chk.chkKey">{{ chk.chkName }}</label>
-        </div>
-    </div>
-</div>

@@ -1,56 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-import { InputTextComponent } from './material/input-text/input-text.component';
-import { InputPasswordComponent } from './material/input-password/input-password.component';
-import { ButtonComponent } from './material/button/button.component';
-import { InputTextAreaComponent } from './material/input-text-area/input-text-area.component';
-import { RadioButtonComponent } from './material/radio-button/radio-button.component';
-import { CheckBoxComponent } from './material/check-box/check-box.component';
-import { DropdownComponent } from './material/dropdown/dropdown.component';
-
-import { InputTextModule } from 'primeng/inputtext';
-import { PasswordModule } from 'primeng/password';
-import { ButtonModule } from 'primeng/button';
-import { InputTextareaModule } from 'primeng/inputtextarea';
-import { RadioButtonModule } from 'primeng/radiobutton';
-import { CheckboxModule } from 'primeng/checkbox';
-import { DropdownModule } from 'primeng/dropdown';
-import { LoginComponent } from './pages/login/login.component';
-import { StudentViewComponent } from './pages/student/student-view/student-view.component';
-import {RouterOutlet} from "@angular/router";
-
-
-
 
 @NgModule({
   declarations: [
-    AppComponent,
-    InputTextComponent,
-    InputPasswordComponent,
-    ButtonComponent,
-    InputTextAreaComponent,
-    RadioButtonComponent,
-    CheckBoxComponent,
-    DropdownComponent,
-    LoginComponent,
-    StudentViewComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    InputTextModule,
-    PasswordModule,
-    ButtonModule,
-    InputTextareaModule,
-    RadioButtonModule,
-    CheckboxModule,
-    DropdownModule,
-    RouterOutlet
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
