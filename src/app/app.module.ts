@@ -10,6 +10,10 @@ import { ClassesComponent } from './pages/classes/classes.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { StaffComponent } from './pages/staff/staff.component';
 import { FinancialComponent } from './pages/financial/financial.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +25,14 @@ import { FinancialComponent } from './pages/financial/financial.component';
     ClassesComponent,
     CoursesComponent,
     StaffComponent,
-    FinancialComponent
+    FinancialComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
