@@ -1,8 +1,0 @@
-<div class="card flex justify-content-center">
-    <div class="flex flex-column gap-3">
-        <div *ngFor="let button of radioButtons" class="field-checkbox">
-            <p-radioButton [inputId]="button.btnKey" name="button" [value]="button" [(ngModel)]="selectedButton"></p-radioButton>
-            <label [for]="button.btnKey" class="ml-2">{{ button.btnName }}</label>
-        </div>
-    </div>
-</div>
