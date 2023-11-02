@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { ActivatedRoute, Data, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Student } from 'src/app/models/student.model';
 import { StudentService } from 'src/app/services/student.service';
 
@@ -22,7 +22,6 @@ export class AllStudentsComponent implements OnInit, AfterViewInit {
   constructor(
     private studentService: StudentService,
     private route: Router,
-    private activatedRoute: ActivatedRoute,
   ) {}
   
   ngAfterViewInit(): void {
