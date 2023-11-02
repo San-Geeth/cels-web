@@ -11,15 +11,21 @@ import { AllStudentsComponent } from './pages/students/all-students/all-students
 import { ViewAndEditStudentComponent } from './pages/students/view-and-edit-student/view-and-edit-student.component';
 import { viewAndEditStudentResolver } from './pages/students/view-and-edit-student/view-and-edit-student.resolver';
 import { AddStudentComponent } from './pages/students/add-student/add-student.component';
-import { allStudentsResolver } from './pages/students/all-students/all-students.resolver';
+import { CoursesComponent } from './pages/courses/courses.component';
+import { AllCoursesComponent } from './pages/courses/all-courses/all-courses.component';
+import { CourseCategoryComponent } from './pages/courses/course-category/course-category.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'students', component: StudentsComponent, children: [
-    {path: 'all-students', component: AllStudentsComponent, resolve: {students: allStudentsResolver}},
+    {path: 'all-students', component: AllStudentsComponent},
     {path: ':index/view-edit', component: ViewAndEditStudentComponent, resolve: {student: viewAndEditStudentResolver}},
     {path: 'add-student', component: AddStudentComponent}
+  ]},
+  {path: 'courses', component: CoursesComponent, children: [
+    {path: 'all-courses', component: AllCoursesComponent},
+    {path: 'course-categories', component: CourseCategoryComponent},
   ]},
   {path: 'users', component: UsersComponent},
   {path: 'staff', component: StaffComponent},

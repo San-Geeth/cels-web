@@ -6,7 +6,6 @@ import { LayoutComponent } from './layout/layout.component';
 import { UsersComponent } from './pages/users/users.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ClassesComponent } from './pages/classes/classes.component';
-import { CoursesComponent } from './pages/courses/courses.component';
 import { StaffComponent } from './pages/staff/staff.component';
 import { FinancialComponent } from './pages/financial/financial.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +14,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentsModule } from './pages/students/students.module';
+import { CoursesModule } from './pages/courses/courses.module';
 
 
 @NgModule({
@@ -24,10 +24,9 @@ import { StudentsModule } from './pages/students/students.module';
     UsersComponent,
     DashboardComponent,
     ClassesComponent,
-    CoursesComponent,
     StaffComponent,
     FinancialComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +34,8 @@ import { StudentsModule } from './pages/students/students.module';
     FormsModule,
     RouterModule,
     BrowserAnimationsModule,
-    StudentsModule
+    StudentsModule,
+    CoursesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
