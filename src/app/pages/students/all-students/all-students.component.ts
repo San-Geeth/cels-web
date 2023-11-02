@@ -13,7 +13,7 @@ import { StudentService } from 'src/app/services/student.service';
 })
 export class AllStudentsComponent implements OnInit, AfterViewInit {
   students: Student[] = [];
-  displayedColumns: string[] = ['index', 'firstName', 'lastName', 'action'];
+  displayedColumns: string[] = ['index', 'firstName', 'lastName'];
   selectedStudent!: Student;
   dataSource!: MatTableDataSource<Student>;
 
