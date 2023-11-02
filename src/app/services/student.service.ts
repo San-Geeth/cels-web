@@ -34,6 +34,33 @@ export class StudentService {
       'charlie@example.com',
       'Company C',
       '789 Maple St'
+    ),
+    new Student(
+      '4',
+      'Charlie',
+      'Brown',
+      '0702196566',
+      'charlie@example.com',
+      'Company C',
+      '789 Maple St'
+    ),
+    new Student(
+      '5',
+      'Charlie',
+      'Brown',
+      '0702196566',
+      'charlie@example.com',
+      'Company C',
+      '789 Maple St'
+    ),
+    new Student(
+      '6',
+      'Charlie',
+      'Brown',
+      '0702196566',
+      'charlie@example.com',
+      'Company C',
+      '789 Maple St'
     )
   ];
 

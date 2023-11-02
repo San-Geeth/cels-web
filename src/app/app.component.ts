@@ -16,7 +16,7 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const gradientColors = [
       '#FCFCFF', // Light gray color
-      '#696969'  // Dark gray color
+      '#FCFCFF'  // Dark gray color
     ];
     const gradientDirection = 'to bottom'; // You can change this to control the gradient direction
   
