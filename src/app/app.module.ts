@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
-import { StudentsComponent } from './pages/students/students.component';
 import { UsersComponent } from './pages/users/users.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ClassesComponent } from './pages/classes/classes.component';
@@ -14,12 +13,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StudentsModule } from './pages/students/students.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    StudentsComponent,
     UsersComponent,
     DashboardComponent,
     ClassesComponent,
@@ -32,7 +33,9 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule,
+    StudentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-sm-6">
+        <mat-form-field class="example-full-width">
+            <mat-label>Index</mat-label>
+            <input matInput placeholder="Index" disabled>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="First Name">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>contact</mat-label>
+            <input matInput placeholder="First Name">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Address</mat-label>
+            <textarea matInput placeholder="Address"></textarea>
+        </mat-form-field>
+        <br>
+        <div class="example-button-row">
+            <button mat-raised-button color="primary">Add</button>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <mat-form-field class="example-full-width">
+            <mat-label>Course</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let food of courses" [value]="food.value">
+                    {{food.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Payment Type</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let food of courses" [value]="food.value">
+                    {{food.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+</div>
