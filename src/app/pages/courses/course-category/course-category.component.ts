@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./course-category.component.css']
 })
 export class CourseCategoryComponent {
-
+  categories: string[] = [
+    'Cat 1',
+    'Cat 2'
+  ];
 }

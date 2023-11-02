@@ -4,8 +4,9 @@ import { CoursesComponent } from './courses.component';
 import { AllCoursesComponent } from './all-courses/all-courses.component';
 import { RouterModule } from '@angular/router';
 import { CourseCategoryComponent } from './course-category/course-category.component';
-
-
+import {MatCardModule} from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,10 @@ import { CourseCategoryComponent } from './course-category/course-category.compo
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule
   ]
 })
 export class CoursesModule { }
