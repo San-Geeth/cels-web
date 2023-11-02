@@ -14,6 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { AllStudentsComponent } from './pages/students/all-students/all-students.component';
+import { ViewAndEditStudentComponent } from './pages/students/view-and-edit-student/view-and-edit-student.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HomeComponent } from './pages/home/home.component';
     CoursesComponent,
     StaffComponent,
     FinancialComponent,
-    HomeComponent
+    HomeComponent,
+    AllStudentsComponent,
+    ViewAndEditStudentComponent
   ],
   imports: [
     BrowserModule,
