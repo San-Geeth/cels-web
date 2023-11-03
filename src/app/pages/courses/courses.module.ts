@@ -7,6 +7,9 @@ import { CourseCategoryComponent } from './course-category/course-category.compo
 import {MatCardModule} from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { MatButtonModule } from '@angular/material/button';
     RouterModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    MatChipsModule,
+    MatIconModule
   ]
 })
 export class CoursesModule { }

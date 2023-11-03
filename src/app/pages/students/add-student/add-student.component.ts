@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Student } from 'src/app/models/student.model';
+import Swal from 'sweetalert2';
 
 
 export interface Course {
@@ -20,4 +21,16 @@ export class AddStudentComponent {
     {value: 'pizza-1', viewValue: 'Pizza'},
     {value: 'tacos-2', viewValue: 'Tacos'},
   ];
+
+  onAdd() {
+    Swal.fire({
+      title: 'Do you want to add new student?',
+      showCancelButton: true,
+      confirmButtonText: 'Save',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success')
+      }
+    })
+  }
 }

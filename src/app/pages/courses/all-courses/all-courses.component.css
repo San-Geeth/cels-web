@@ -1,0 +1,13 @@
+.example-full-width {
+    width: 100%;
+}
+
+.icon-style {
+    color: blue;
+}
+
+.chip-style {
+    background-color: green;
+    color: white;
+    border: solid 3px green;
+}
