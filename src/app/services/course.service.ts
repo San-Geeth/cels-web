@@ -24,6 +24,13 @@ export class CourseService {
     'Full'
   ]
 
+  private courseTypes: string[] = [
+    'Level 1',
+    'Lebel 2',
+    'Intermediate',
+    'Advanced'
+  ]
+
   getCourses() {
     return this.courses;
   }
@@ -38,5 +45,17 @@ export class CourseService {
 
   getPaymentTypes() {
     return this.paymentTypes;
+  }
+
+  getCourseTypes() {
+    return this.courseTypes;
+  }
+
+  addNewCategory(category: string) {
+    this.courseCats.push(category);
+  }
+
+  addNewType(type: string) {
+    this.courseTypes.push(type);
   }
 }

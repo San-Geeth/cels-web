@@ -1,26 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Course } from 'src/app/models/course.model';
 import { Student } from 'src/app/models/student.model';
+import { CourseService } from 'src/app/services/course.service';
 import Swal from 'sweetalert2';
-
-
-export interface Course {
-  value: string;
-  viewValue: string;
-}
 
 @Component({
   selector: 'app-add-student',
   templateUrl: './add-student.component.html',
   styleUrls: ['./add-student.component.css']
 })
-export class AddStudentComponent {
-  student!: Student;
+export class AddStudentComponent implements OnInit {
 
-  courses: Course[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'},
-  ];
+  student!: Student;
+  courses: Course[] = [];
+
+  constructor(
+    private coursesService: CourseService
+  ) {}
+
+  ngOnInit(): void {
+    this.courses = this.coursesService.getCourses();
+  }
 
   onAdd() {
     Swal.fire({

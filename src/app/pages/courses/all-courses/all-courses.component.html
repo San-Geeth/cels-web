@@ -23,6 +23,11 @@
                             </mat-chip>
                         </div>
                     </div>
+                    <div class="col-sm-3" *ngIf="!course.enrollments">
+                        <div class="d-flex align-items-center">
+                            <mat-icon class="icon-style">fiber_new</mat-icon>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
@@ -55,7 +60,7 @@
         </mat-form-field>
         <mat-form-field class="example-full-width">
             <mat-label>Course Fee</mat-label>
-            <input matInput placeholder="Course Name" #courseFee>
+            <input matInput placeholder="Course Fee" #courseFee>
         </mat-form-field>
         <mat-form-field class="example-full-width">
             <mat-label>Category</mat-label>

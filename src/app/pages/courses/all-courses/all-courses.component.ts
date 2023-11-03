@@ -43,11 +43,10 @@ export class AllCoursesComponent implements OnInit {
         const name = this.courseName.nativeElement.value;
         const description = this.courseDescription.nativeElement.value;
         const fee = parseFloat(this.courseFee.nativeElement.value);
-    ;
-
         this.coursesService.addnewCourse(
           new Course(name, this.selectedCategory, this.selectedPaymentType, description, fee)
         );
+        this.onClear();
         Swal.fire('Added!', 'New course has been added.', 'success');
       }
     });
