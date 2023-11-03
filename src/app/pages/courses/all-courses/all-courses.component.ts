@@ -12,6 +12,9 @@ export class AllCoursesComponent implements OnInit {
   @ViewChild('courseName') courseName!: ElementRef;
   @ViewChild('courseFee') courseFee!: ElementRef;
   @ViewChild('courseDescription') courseDescription!: ElementRef;
+  @ViewChild('coursePaymentType') coursePaymentType!: ElementRef;
+  selectedPaymentType!: string;
+  selectedCategory!: string;
   editable: boolean = false;
 
   courses: Course[] = [];
@@ -40,9 +43,10 @@ export class AllCoursesComponent implements OnInit {
         const name = this.courseName.nativeElement.value;
         const description = this.courseDescription.nativeElement.value;
         const fee = parseFloat(this.courseFee.nativeElement.value);
+    ;
 
         this.coursesService.addnewCourse(
-          new Course(name, 'bb', description, fee)
+          new Course(name, this.selectedCategory, this.selectedPaymentType, description, fee)
         );
         Swal.fire('Added!', 'New course has been added.', 'success');
       }
@@ -54,6 +58,8 @@ export class AllCoursesComponent implements OnInit {
     this.courseName.nativeElement.value = course.name;
     this.courseFee.nativeElement.value = course.courseFee;
     this.courseDescription.nativeElement.value = course.description;
+    this.selectedPaymentType = course.paymentType;
+    this.selectedCategory = course.category;
   }
 
   onClear() {
@@ -61,5 +67,8 @@ export class AllCoursesComponent implements OnInit {
     this.courseName.nativeElement.value = '';
     this.courseFee.nativeElement.value = '';
     this.courseDescription.nativeElement.value = '';
+    this.selectedPaymentType = ''
+    this.selectedCategory = ''
   }
+
 }
