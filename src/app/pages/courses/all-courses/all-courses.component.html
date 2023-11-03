@@ -1,13 +1,21 @@
 <div class="row">
-    <div class="col-sm-6">
-        <h1>Course Categories</h1>
+    <div class="col-sm-6 courses-style" *ngIf="courses != null && courses.length > 0; else infoText">
+        <h1>Courses</h1>
         <mat-card *ngFor="let course of courses" class="mt-2">
             <mat-card-content>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="d-flex justify-content-end">
+                            <mat-icon class="dlt-icon">delete</mat-icon>
+                            <mat-icon class="edit-icon" (click)="onEdit(course)">edit</mat-icon>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-sm-9">
                         <h2>{{ course.name }}</h2>
                     </div>
-                    <div class="col-sm-3 align-items-center">
+                    <div class="col-sm-3">
                         <div class="d-flex align-items-center">
                             <mat-icon class="icon-style">verified_user</mat-icon>
                             <mat-chip class="chip-style">
@@ -21,21 +29,49 @@
                         <p>{{ course.description }}</p>
                     </div>
                 </div>
+                <mat-divider></mat-divider>
+                <div class="row">
+                    <div class="col-sm-12">
+                        LKR {{ course.courseFee }}
+                    </div>
+                </div>
             </mat-card-content>
+            <ng-template></ng-template>
         </mat-card>
     </div>
+    <ng-template #infoText>
+        <div class="col-sm-6">
+            <h3>No Courses Found!</h3>
+        </div>
+    </ng-template>
     <div class="col-sm-6">
-        <h1>New Category</h1>
+        <h1>New Course</h1>
         <mat-form-field class="example-full-width">
-            <mat-label>Category Name</mat-label>
-            <input matInput placeholder="Category Name">
+            <mat-label>Course Name</mat-label>
+            <input matInput placeholder="Course Name" #courseName>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Course Fee</mat-label>
+            <input matInput placeholder="Course Name" #courseFee>
         </mat-form-field>
         <mat-form-field class="example-full-width">
             <mat-label>Description</mat-label>
-            <textarea matInput placeholder="Address"></textarea>
+            <textarea matInput placeholder="Description" #courseDescription></textarea>
         </mat-form-field>
-        <div class="example-button-row">
-            <button mat-raised-button color="primary" (click)="onAdd()">Add</button>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="button-holder">
+                    <div class="example-button-row" *ngIf="!editable">
+                        <button mat-raised-button color="primary" (click)="onAdd()">Add</button>
+                    </div>
+                    <div class="example-button-row" *ngIf="editable">
+                        <button mat-raised-button color="primary" (click)="onAdd()">Update</button>
+                    </div>
+                    <div class="example-button-row">
+                        <button mat-raised-button color="yellow" (click)="onClear()">Clear</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

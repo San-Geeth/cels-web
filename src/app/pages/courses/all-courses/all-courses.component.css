@@ -9,5 +9,26 @@
 .chip-style {
     background-color: green;
     color: white;
-    border: solid 3px green;
+    border: solid 3px blue;
 }
+
+.courses-style {
+    margin-bottom: 10vh;
+}
+
+.dlt-icon, 
+.edit-icon {
+    cursor: pointer;
+}
+
+.button-holder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: 0;
+}
+
+button[color="yellow"] {
+    background-color: orange;
+    color: black; 
+    margin-left: 1vh;
+  }
