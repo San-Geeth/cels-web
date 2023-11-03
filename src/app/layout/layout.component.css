@@ -1,0 +1,13 @@
+/* Hide the scrollbar for webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  
+  /* Add additional styles for the container to make it scrollable */
+  /* You can adjust the height and other styles as needed */
+  div.scrollable-container {
+    height: 100vh; /* Set the desired height */
+    overflow: auto;
+  }
+  

@@ -1,18 +1,49 @@
-<div class="row">
-    <div class="col-sm-6">
-        <h1>Course Categories</h1>
-        <mat-card *ngFor="let category of categories" class="mt-2">
-            <mat-card-content>{{ category }}</mat-card-content>
-        </mat-card>
-    </div>
-    <div class="col-sm-6">
-        <h1>New Category</h1>
-        <mat-form-field class="example-full-width">
-            <mat-label>Category Name</mat-label>
-            <input matInput placeholder="Category Name" [(ngModel)]="newCategory">
-        </mat-form-field>
-        <div class="example-button-row">
-            <button mat-raised-button color="primary" (click)="onAdd()">Add</button>
+<mat-card>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Course Categories</h1>
+                <mat-card *ngFor="let category of categories" class="mt-2 card-style">
+                    <mat-card-content>
+                        <h3>
+                            {{ category }}
+                        </h3>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6">
+                <h1>New Category</h1>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Category Name</mat-label>
+                    <input matInput placeholder="Category Name" [(ngModel)]="newCategory" (input)="onCategoryNameChange($event)">
+                </mat-form-field>
+                <div class="example-button-row">
+                    <button mat-raised-button [disabled]="!enableAddCategory" color="primary" (click)="onCategoryAdd()">Add</button>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </mat-card-content>
+</mat-card>
+<mat-divider class="mt-5"></mat-divider>
+<mat-card>
+    <mat-card-content>
+        <div class="row mt-3">
+            <div class="col-sm-6">
+                <h1>Course Types</h1>
+                <mat-card *ngFor="let type of types" class="mt-2 card-style">
+                    <mat-card-content>{{ type }}</mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6">
+                <h1>New Type</h1>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Type</mat-label>
+                    <input matInput placeholder="Category Name" [(ngModel)]="newType">
+                </mat-form-field>
+                <div class="example-button-row">
+                    <button mat-raised-button color="primary" (click)="onTypeAdd()">Add</button>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
