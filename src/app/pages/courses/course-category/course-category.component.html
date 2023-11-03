@@ -9,10 +9,10 @@
         <h1>New Category</h1>
         <mat-form-field class="example-full-width">
             <mat-label>Category Name</mat-label>
-            <input matInput placeholder="Category Name">
+            <input matInput placeholder="Category Name" [(ngModel)]="newCategory">
         </mat-form-field>
         <div class="example-button-row">
-            <button mat-raised-button color="primary">Add</button>
+            <button mat-raised-button color="primary" (click)="onAdd()">Add</button>
         </div>
     </div>
 </div>
