@@ -1,1 +1,41 @@
-<p>all-courses works!</p>
+<div class="row">
+    <div class="col-sm-6">
+        <h1>Course Categories</h1>
+        <mat-card *ngFor="let course of courses" class="mt-2">
+            <mat-card-content>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <h2>{{ course.name }}</h2>
+                    </div>
+                    <div class="col-sm-3 align-items-center">
+                        <div class="d-flex align-items-center">
+                            <mat-icon class="icon-style">verified_user</mat-icon>
+                            <mat-chip class="chip-style">
+                                {{ course.enrollments }}
+                            </mat-chip>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <p>{{ course.description }}</p>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-sm-6">
+        <h1>New Category</h1>
+        <mat-form-field class="example-full-width">
+            <mat-label>Category Name</mat-label>
+            <input matInput placeholder="Category Name">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="Address"></textarea>
+        </mat-form-field>
+        <div class="example-button-row">
+            <button mat-raised-button color="primary" (click)="onAdd()">Add</button>
+        </div>
+    </div>
+</div>
