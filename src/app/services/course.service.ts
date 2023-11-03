@@ -9,16 +9,34 @@ export class CourseService {
   constructor() { }
 
   private courses: Course[] = [
-    new Course('IELTS', 'type1', 34, 'Test descriptions for IELTS', 56000),
-    new Course('PTE', 'type1', 56, 'Test descriptions for PTE', 40000),
-    new Course('KET', 'type1', 18, 'Test descriptions for KET', 34000)
+    new Course('IELTS', 'type1', 'Test descriptions for IELTS', 56000, 56),
+    new Course('PTE', 'type1', 'Test descriptions for PTE', 40000, 67),
+    new Course('KET', 'type1', 'Test descriptions for KET', 34000, 90)
   ];
 
-  getCourses(): Course[] {
+  private courseCats: string[] = [
+    'Cat 1',
+    'Cat 2'
+  ]
+
+  private paymentTypes: string[] = [
+    'Installment',
+    'Full'
+  ]
+
+  getCourses() {
     return this.courses;
   }
 
   addnewCourse(course: Course): void {
     this.courses.push(course);
+  }
+
+  getCourseCats() {
+    return this.courseCats;
+  }
+
+  getPaymentTypes() {
+    return this.paymentTypes;
   }
 }

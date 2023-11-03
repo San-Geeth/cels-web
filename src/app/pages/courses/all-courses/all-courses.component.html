@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-6 courses-style" *ngIf="courses != null && courses.length > 0; else infoText">
         <h1>Courses</h1>
-        <mat-card *ngFor="let course of courses" class="mt-2">
+        <mat-card *ngFor="let course of courses" class="mt-2 card-style">
             <mat-card-content>
                 <div class="row">
                     <div class="col-sm-12">
@@ -53,6 +53,22 @@
         <mat-form-field class="example-full-width">
             <mat-label>Course Fee</mat-label>
             <input matInput placeholder="Course Name" #courseFee>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Category</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let cat of courseCats" [value]="cat">
+                    {{cat}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Payment Type</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let type of paymentTypes" [value]="type">
+                    {{type}}
+                </mat-option>
+            </mat-select>
         </mat-form-field>
         <mat-form-field class="example-full-width">
             <mat-label>Description</mat-label>

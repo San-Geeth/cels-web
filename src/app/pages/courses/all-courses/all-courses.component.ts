@@ -15,11 +15,15 @@ export class AllCoursesComponent implements OnInit {
   editable: boolean = false;
 
   courses: Course[] = [];
+  courseCats: string[] = [];
+  paymentTypes: string[] = [];
 
   constructor(private coursesService: CourseService) {}
 
   ngOnInit(): void {
     this.courses = this.coursesService.getCourses();
+    this.courseCats = this.coursesService.getCourseCats();
+    this.paymentTypes = this.coursesService.getPaymentTypes();
   }
 
   onAdd() {
@@ -38,7 +42,7 @@ export class AllCoursesComponent implements OnInit {
         const fee = parseFloat(this.courseFee.nativeElement.value);
 
         this.coursesService.addnewCourse(
-          new Course(name, 'bb', 56, description, fee)
+          new Course(name, 'bb', description, fee)
         );
         Swal.fire('Added!', 'New course has been added.', 'success');
       }

@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatDividerModule} from '@angular/material/divider';
     FormsModule,
     MatChipsModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSelectModule
   ]
 })
 export class CoursesModule { }
