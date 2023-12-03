@@ -15,6 +15,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentsModule } from './pages/students/students.module';
 import { CoursesModule } from './pages/courses/courses.module';
+import { LoginComponent } from './pages/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { CoursesModule } from './pages/courses/courses.module';
     StaffComponent,
     FinancialComponent,
     HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { CoursesModule } from './pages/courses/courses.module';
     RouterModule,
     BrowserAnimationsModule,
     StudentsModule,
-    CoursesModule
+    CoursesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

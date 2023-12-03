@@ -14,8 +14,10 @@ import { AddStudentComponent } from './pages/students/add-student/add-student.co
 import { CoursesComponent } from './pages/courses/courses.component';
 import { AllCoursesComponent } from './pages/courses/all-courses/all-courses.component';
 import { CourseCategoryComponent } from './pages/courses/course-category/course-category.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
+  {path:'login', component: LoginComponent},
   {path: '', component: HomeComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'students', component: StudentsComponent, children: [
