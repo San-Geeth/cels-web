@@ -16,8 +16,16 @@
         </mat-form-field>
         <br>
         <mat-form-field class="example-full-width">
-            <mat-label>contact</mat-label>
-            <input matInput placeholder="First Name">
+            <mat-label>Contact</mat-label>
+            <input matInput placeholder="First Name" [(ngModel)]="contact">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Whatsapp</mat-label>
+            <input matInput placeholder="Whatsapp" [(ngModel)]="whatsapp" (input)="checkWhatsAppNull()">
+            <ng-container *ngIf="showSameAsContact">
+                <mat-checkbox class="example-margin" [(ngModel)]="checked" (change)="setWhatsApp()">Same as Contact</mat-checkbox>
+            </ng-container>
         </mat-form-field>
         <br>
         <mat-form-field class="example-full-width">

@@ -7,6 +7,7 @@ export class Student {
     public birthDay: string;
     public address: string;
     public company?: string;
+    public whatsapp?: string;
     public school?: string;
 
     constructor(
@@ -18,6 +19,7 @@ export class Student {
         birthDay: string,
         address: string,
         company?: string,
+        whatsapp?: string,
         school?: string,
     ) {
         this.index = index;
@@ -28,6 +30,7 @@ export class Student {
         this.company = company;
         this.school = school;
         this.birthDay = birthDay;
+        this.whatsapp = whatsapp;
         this.address = address;
     }
 }
