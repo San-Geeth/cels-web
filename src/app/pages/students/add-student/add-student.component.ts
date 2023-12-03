@@ -11,8 +11,11 @@ import Swal from 'sweetalert2';
 })
 export class AddStudentComponent implements OnInit {
 
-  student!: Student;
   courses: Course[] = [];
+  checked: boolean = false;
+  showSameAsContact: boolean = true;
+  contact!: string;
+  whatsapp!: string;
 
   constructor(
     private coursesService: CourseService
@@ -20,6 +23,21 @@ export class AddStudentComponent implements OnInit {
 
   ngOnInit(): void {
     this.courses = this.coursesService.getCourses();
+  }
+
+  checkWhatsAppNull() {
+    if(this.whatsapp != null && this.whatsapp.length > 0) {
+      this.showSameAsContact = false;
+    } else if (this.whatsapp.length <= 0) {
+      this.showSameAsContact = true;
+    }
+  }
+  setWhatsApp() {
+    if(this.checked === true) {
+      this.whatsapp = this.contact
+    } else {
+      this.whatsapp = '';
+    }
   }
 
   onAdd() {
